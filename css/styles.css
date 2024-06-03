@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f8f9fa;
+    color: #003366;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #007BFF;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.3);
+}
+
+.logo h1 {
+    margin-left: 10px;
+    font-size: 2rem;
+    color: whitesmoke;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+nav ul li {
+    font-size: 1.2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav ul li a:hover {
+    color: #194064;
+    text-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: whitesmoke;
+    margin-bottom: 4px;
+    border-radius: 5px;
+}
+
+#inicio {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+#inicio video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    filter: blur(5px) opacity(0.4);
+}
+
+#inicio .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 10);
+}
+
+#inicio .content {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    text-align: center;
+}
+
+#inicio h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+}
+
+#inicio h3 {
+    font-size: 1.3rem;
+}
+
+#sobre-nos {
+    padding: 40px;
+    background-color: #e1f5fe;
+    text-align: center;
+}
+
+#sobre-nos h1 {
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+#sobre-nos ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+}
+
+#sobre-nos ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007BFF;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    max-width: calc(100% - 40px);
+    box-sizing: border-box;
+}
+
+#sobre-nos ul li:hover {
+    transform: scale(1.05);
+}
+
+#sobre-nos ul li img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.video-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.video-section h2 {
+    font-size: 2rem;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+
+.video-description {
+    margin-top: 20px;
+    font-size: 20px;
+    color: rgb(39, 39, 39);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#drone {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.drone-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.drone-image {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.drone-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50px;
+}
+
+.drone-description {
+    flex: 2;
+}
+
+.drone-description h2 {
+    color: #007BFF;
+    margin-bottom: 20px;
+    font-size: 60px;
+}
+
+.drone-description p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.saiba-mais-btn {
+    display: inline-block;
+    padding: 30px 40px;
+    background-color: #007BFF;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+.saiba-mais-btn:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #007BFF;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    z-index: 100;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer ul li img {
+    width: 40px;
+    height: auto;
+}
+
+footer h2 {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #007BFF;
+        border-radius: 10px;
+        padding: 10px 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .hamburger span {
+        height: 3px;
+        width: 25px;
+        background: whitesmoke;
+        margin-bottom: 4px;
+        border-radius: 5px;
+    }
+
+    #inicio video {
+        filter: blur(5px) opacity(0.6);
+        height: 600px;
+    }
+
+    #inicio video-container, iframe {
+        max-width: 100%; 
+        height: 300px; 
+        display: block; 
+        margin: 0 auto; 
+    }
+    #sobre-nos ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #sobre-nos ul li {
+        width: calc(50% - 10px);
+    }
+
+    .drone-container {
+        flex-direction: column;
+        align-items: center; 
+        text-align: center; 
+    }
+
+    .drone-image {
+        margin-bottom: 20px; 
+        display: flex; 
+        justify-content: center; 
+    }
+
+    .drone-image img {
+        max-width: 300px; 
+        height: auto; 
+        border-radius: 10px; 
+    }
+
+    .drone-description {
+        text-align: center; 
+        max-width: 80%; 
+    }
+}

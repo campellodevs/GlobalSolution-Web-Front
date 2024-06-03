@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logoaquadrone.png">
+    <link rel="stylesheet" href="css/quemsomos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>AquaDrone</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logoaquadrone.png" alt="Logo AquaDrone" width="200" height="150">
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contatos.html">Contatos</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="titulo">QUEM SOMOS?</div>
+        <div class="imagens-container">
+            <div class="imagem">
+                <img src="images/victorio.jpeg" alt="Victorio">
+                <p>Victorio</p>
+            </div>
+            <div class="imagem">
+                <img src="images/lucca.jpeg" alt="Lucca">
+                <p>Lucca</p>
+            </div>
+            <div class="imagem">
+                <img src="images/gui.jpeg" alt="Gui">
+                <p>Gui</p>
+            </div>
+        </div>
+        <div class="caixa-texto">
+            <p>Olá, somos Lucca, Victorio e Guilherme, estudantes de Engenharia de Software na FIAP. Nosso trabalho concentra-se na Global Solution proposta pela Oceans 20. Com dedicação e profissionalismo, buscamos desenvolver soluções sólidas para desafios globais, alinhadas com os objetivos da iniciativa. Nosso compromisso é criar tecnologias que tenham um impacto mensurável e duradouro.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Direitos Reservados à AquaDrone Innovations</p>
+        <h2>Nos siga nas Redes Sociais</h2>
+        <ul>
+            <li><a href="https://www.instagram.com" target="_blank"><img src="images/instagramicon.png" alt="Instagram"></a></li>
+            <li><a href="https://www.youtube.com" target="_blank"><img src="images/youtubeicon.png" alt="YouTube"></a></li>
+            <li><a href="https://www.facebook.com" target="_blank"><img src="images/facebookicon.png" alt="Facebook"></a></li>
+        </ul>
+    </footer>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

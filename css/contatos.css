@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #003366;
+    position: relative;
+    padding-top: 120px;
+    padding-bottom: 140px;
+    overflow-y: auto;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #007BFF;
+    z-index: 1000; 
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.4);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+nav ul li {
+    font-size: 1.2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav ul li a:hover {
+    color: #194064;
+    text-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.contact-section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-section h2 {
+    color: #007BFF;
+}
+
+.contact-section address, .contact-section p {
+    margin-bottom: 20px;
+}
+
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section input[type="tel"],
+.contact-section textarea {
+    display: block;
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-section button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+    background-color: #0056b3;
+}
+
+
+.contact-section input[type="text"]::placeholder,
+.contact-section input[type="email"]::placeholder,
+.contact-section input[type="tel"]::placeholder,
+.contact-section textarea::placeholder {
+    font-size: 14px; 
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #007BFF;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    z-index: 100; 
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer ul li img {
+    width: 40px;
+    height: auto;
+}
+
+footer h2 {
+    margin-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #007BFF;
+        border-radius: 10px;
+        padding: 10px 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000; 
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 1001; 
+    }
+
+    .hamburger span {
+        height: 3px;
+        width: 25px;
+        background: whitesmoke;
+        margin-bottom: 4px;
+        border-radius: 5px;
+        nav ul li {
+            font-size: 1rem;
+        }
+    
+        .contact-section input[type="text"],
+        .contact-section input[type="email"],
+        .contact-section input[type="tel"],
+        .contact-section textarea {
+            width: calc(45% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    
+        .contact-section input[type="text"]::placeholder,
+        .contact-section input[type="email"]::placeholder,
+        .contact-section input[type="tel"]::placeholder,
+        .contact-section textarea::placeholder {
+            font-size: 10px; 
+        }
+    
+        .brazil-info {
+            flex: 1;
+        }
+    }
+}

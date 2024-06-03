@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logoaquadrone.png">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>AquaDrone</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logoaquadrone.png" alt="Logo AquaDrone" width="200" height="150">
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contatos.html">Contatos</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="quiz-title">Seja bem-vindo ao AquaDrone Quiz!</h2>
+        <div class="quiz-container">
+            <div id="quiz"></div>
+            <div class="quiz-results" id="quiz-results"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Direitos Reservados à AquaDrone Innovations</p>
+        <h2>Nos siga nas Redes Sociais</h2>
+        <ul>
+            <li><a href="https://www.instagram.com" target="_blank"><img src="images/instagramicon.png" alt="Instagram"></a></li>
+            <li><a href="https://www.youtube.com" target="_blank"><img src="images/youtubeicon.png" alt="YouTube"></a></li>
+            <li><a href="https://www.facebook.com" target="_blank"><img src="images/facebookicon.png" alt="Facebook"></a></li>
+        </ul>
+    </footer>
+
+    <script src="js/quiz.js"></script>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

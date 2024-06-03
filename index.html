@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logoaquadrone.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>AquaDrone</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logoaquadrone.png" alt="Logo AquaDrone" width="200" height="150">
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#sobre-nos">Sobre nós</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contatos.html">Contatos</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <div class="overlay"></div>
+            <video autoplay muted loop>
+                <source src="video/videogs.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+            <div class="content">
+                <h1>Seja bem-vindo ao projeto AquaDrone</h1>
+                <h3>Drones Inteligentes, Oceanos Saudáveis!</h3>
+            </div>
+        </section>
+        <section id="video-conscientizacao" class="video-section">
+            <h2>Veja a real situação dos oceanos</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/QBVyS5-iNLk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class="video-description">A poluição dos mares está aumentando a cada ano, ameaçando a vida marinha e a saúde dos ecossistemas oceânicos. A AquaDrone, com seu protótipo de drone especializado em colher dados da água, está comprometida em combater esse problema, fornecendo informações precisas sobre o grau de poluição e ajudando na preservação dos oceanos.</p>
+        </section>
+
+        <section id="sobre-nos">
+            <h1>Sobre nós!</h1>
+            <ul>
+                <li>
+                    <img src="images/conscienticon.png" alt="Conscientizar">
+                    Conscientizar
+                </li>
+                <li>
+                    <img src="images/fishicon.png" alt="Proteger a vida marinha">
+                    Proteger a vida marinha
+                </li>
+                <li>
+                    <img src="images/trashicon.png" alt="Reduzir o lixo nos oceanos">
+                    Reduzir o lixo nos oceanos
+                </li>
+                <li>
+                    <img src="images/moneyicon.png" alt="Viabilidade Econômica">
+                    Viabilidade Econômica
+                </li>
+            </ul>
+        </section>
+        <section id="drone">
+            <div class="drone-container">
+                <div class="drone-image">
+                    <img src="images/droneprototipo.png" alt="Protótipo de Drone">
+                </div>
+                <div class="drone-description">
+                    <h2>Conheça o nosso protótipo!</h2>
+                    <p>O nosso protótipo de drone é uma ferramenta revolucionária no combate à poluição marítima. Equipado com sensores avançados, ele é capaz de coletar dados precisos da água, ajudando na preservação dos oceanos.</p>
+                    <a href="produtos.html" class="saiba-mais-btn">Saiba Mais</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Direitos Reservados à AquaDrone Innovations</p>
+        <h2>Nos siga nas Redes Sociais</h2>
+        <ul>
+            <li><a href="https://www.instagram.com" target="_blank"><img src="images/instagramicon.png" alt="Instagram"></a></li>
+            <li><a href="https://www.youtube.com" target="_blank"><img src="images/youtubeicon.png" alt="YouTube"></a></li>
+            <li><a href="https://www.facebook.com" target="_blank"><img src="images/facebookicon.png" alt="Facebook"></a></li>
+        </ul>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

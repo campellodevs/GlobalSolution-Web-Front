@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logoaquadrone.png" alt="Logo AquaDrone" width="200" height="150">
+            </a>
+        </div>
+        <nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contatos.html">Contatos</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="titulo-login" id="login-container">
+        <h1>Faça seu login</h1>
+        <form class="login-form" id="login-form">
+            <div class="input-group">
+                <label for="username">Nome de Usuário</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <button id="register-button" class="register-button">Registre aqui</button>
+    </div>
+    
+    <div class="titulo-login" id="register-container" style="display: none;">
+        <h1>Crie sua conta</h1>
+        <form class="register-form" id="register-form">
+            <div class="input-group">
+                <label for="new-username">Nome de Usuário</label>
+                <input type="text" id="new-username" name="new-username" required>
+            </div>
+            <div class="input-group">
+                <label for="new-password">Senha</label>
+                <input type="password" id="new-password" name="new-password" required>
+            </div>
+            <button type="submit">Registrar</button>
+        </form>
+        <button id="login-button" class="login-button">Voltar ao login</button>
+    </div>
+    
+    <script src="login.js"></script>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+        
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+        
+            const storedUsername = localStorage.getItem('username');
+            const storedPassword = localStorage.getItem('password');
+        
+            if ((username === 'aquadrone' && password === 'innovations') || 
+                (username === storedUsername && password === storedPassword)) {
+                alert('Login bem-sucedido');
+                document.getElementById('login-container').innerHTML = '<h1>Você está logado</h1>';
+            } else {
+                alert('Nome de usuário ou senha incorretos');
+            }
+        });
+        
+        document.getElementById('register-button').addEventListener('click', function() {
+            document.getElementById('login-container').style.display = 'none';
+            document.getElementById('register-container').style.display = 'flex';
+        });
+        
+        document.getElementById('login-button').addEventListener('click', function() {
+            document.getElementById('register-container').style.display = 'none';
+            document.getElementById('login-container').style.display = 'flex';
+        });
+        
+        document.getElementById('register-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+        
+            const newUsername = document.getElementById('new-username').value;
+            const newPassword = document.getElementById('new-password').value;
+        
+            localStorage.setItem('username', newUsername);
+            localStorage.setItem('password', newPassword);
+        
+            alert('Conta criada com sucesso para ' + newUsername + '!');
+            document.getElementById('register-container').style.display = 'none';
+            document.getElementById('login-container').style.display = 'flex';
+        });
+
+       
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+    </script>
+</body>
+<footer>
+    <p>&copy; 2024 Direitos Reservados à AquaDrone Innovations</p>
+    <h2>Nos siga nas Redes Sociais</h2>
+    <ul>
+        <li><a href="https://www.instagram.com" target="_blank"><img src="images/instagramicon.png" alt="Instagram"></a></li>
+        <li><a href="https://www.youtube.com" target="_blank"><img src="images/youtubeicon.png" alt="YouTube"></a></li>
+        <li><a href="https://www.facebook.com" target="_blank"><img src="images/facebookicon.png" alt="Facebook"></a></li>
+    </ul>
+</footer>
+</html>

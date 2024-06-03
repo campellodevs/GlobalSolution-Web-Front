@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logoaquadrone.png">
+    <link rel="stylesheet" href="css/produtos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>AquaDrone</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logoaquadrone.png" alt="Logo AquaDrone" width="200" height="150">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contatos.html">Contatos</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <div class="carousel-header">
+        <h2>Fotos dos nossos drones</h2>
+        <p>Conheça nossa linha de drones avançados para diversas aplicações.</p>
+    </div>
+    
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="css/img2/drone1.jpg">
+            <img src="css/img2/drone2.webp">
+            <img src="css/img2/drone3.webp">
+        </div>
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+        <div class="texto-container" id="texto-container"></div>
+    </div>
+    
+    <div class="caixas-container">
+        <div class="caixa-texto">
+            <h3>Ideia Inicial:</h3>
+            <p>O drone marinho surgiu da necessidade de enfrentar os desafios ambientais dos oceanos, coletando dados sobre a qualidade da água e monitorando áreas afetadas pela poluição.</p>
+        </div>
+        <div class="caixa-texto">
+            <h3>Funcionamento do Drone:</h3>
+            <p>Equipado com sensores avançados, o drone coleta informações sobre pH, temperatura e poluentes na água, transmitindo os dados em tempo real para análise e monitoramento.</p>
+        </div>
+        <div class="caixa-texto">
+            <h3>Beneficiários:</h3>
+            <p>ONGs ambientais, instituições de pesquisa marinha, autoridades locais e pescadores podem se beneficiar do uso do drone para monitorar e proteger os oceanos.</p>
+        </div>
+        <div class="caixa-texto">
+            <h3>Impactos Positivos:</h3>
+            <p>O drone marinho ajuda na identificação de áreas prioritárias para conservação, na implementação de medidas de proteção e na mitigação dos impactos da atividade humana nos oceanos, promovendo a preservação da vida marinha e a sustentabilidade dos recursos marinhos.</p>
+        </div>
+        <div class="caixa-texto">
+            <h3>Aspectos Financeiros:</h3>
+            <p>O projeto do drone marinho busca a viabilidade financeira por meio de parcerias com organizações ambientais, financiamento público e investimento privado. Além disso, a eficiência operacional e a escalabilidade do projeto contribuem para sua sustentabilidade financeira a longo prazo.</p>
+        </div>
+        <div class="caixa-texto">
+            <h3>Conteúdo do Kit:</h3>
+            <p>Cada kit de drone marinho inclui um drone, um controle remoto e quatro sensores smart. Esses componentes são essenciais para a coleta de dados sobre a qualidade da água e a detecção de poluentes nos oceanos.</p>
+        </div>
+    </div>
+    
+    
+    <footer>
+        <p>&copy; 2024 Direitos Reservados à AquaDrone Innovations</p>
+        <h2>Nos siga nas Redes Sociais</h2>
+        <ul>
+            <li><a href="https://www.instagram.com" target="_blank"><img src="images/instagramicon.png" alt="Instagram"></a></li>
+            <li><a href="https://www.youtube.com" target="_blank"><img src="images/youtubeicon.png" alt="YouTube"></a></li>
+            <li><a href="https://www.facebook.com" target="_blank"><img src="images/facebookicon.png" alt="Facebook"></a></li>
+        </ul>
+    </footer>
+
+    <script src="js/produtos.js"></script>
+    <script>
+         const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('nav ul');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
