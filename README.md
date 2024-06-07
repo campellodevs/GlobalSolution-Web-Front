@@ -17,4 +17,5 @@ Aquisição do Kit Drone Marinho
 Cada kit de drone marinho inclui um drone, um controle remoto e quatro sensores smart. Esses componentes são essenciais para a coleta de dados sobre a qualidade da água e a detecção de poluentes nos oceanos. A aquisição do kit é simplificada para empresas e indivíduos interessados em contribuir para a preservação dos oceanos.
 
 
-Autores: Lucca Campello, Guilherme Moreira, Victório Batelli
+Autores: Lucca Campello - 558455, Guilherme Moreira RM - 557290 , Victório Batelli RM - 554723
+
